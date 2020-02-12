@@ -156,7 +156,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--I added question six this is for the additional cold question-->
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1>
+		<h1>Question 6</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
@@ -165,6 +165,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
         <a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 </div>	
+	
+<!--I added a results page and changed the id and header to match results-->
+<!--I added the var results text from the App 3 instructions-->
+<div class="page" id="results">	
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+<!--the script part down here adds up the variables-->
+	<script>
+	var resultText = document.getElementById("results");
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+</script>
+</div>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
