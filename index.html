@@ -186,9 +186,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 <!-- I added the div content container part so hopefully my results will now have a button-->
 	<div id="content" class="w3-container">
-		<p>Click for Results</p>
+		<p id="results">resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;</p>
 	</div>
-	<a href="#results_percentage"	onclick= "allegeryPercent();"	class="w3-btn w3-black"> Results</a>
+	<a href="#results_percentage"	onclick= "allegeryPercent();"	class="w3-btn w3-black"> Results</a>	-->
 <!--the script part down here adds up the variables and I further indented the script-->
 </div>
 <div class="page" id="results_percentage">	
@@ -197,7 +197,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	<div id="content" class="w3-container">
 	<script>
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 //I tried adding print (resultText) to see if it would print what was defined as resultText 
 //The print (resultText) WORKED YAY!! It made the words "probability it is allergies" and "probability it is cold" pop up on the results page now I just need to get the percentage values to just show up
 //I tried printing the print(allergy_count / total_count) and print(cold_count / total_count)
