@@ -189,17 +189,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	<a href="#results_percentage"	onclick= "allegeryPercent();"	class="w3-btn w3-black"> Results</a>
 <!--the script part down here adds up the variables and I further indented the script-->
-	
+</div>
+<div class="page" id="results_percentage">	
+	<div class="w3-container w3-flat-carrot">
+		<h1>Percentage of Allergy and Cold</h1>
+	</div>
+	<div id="content" class="w3-container">
 	<script>
-	var resultText = document.getElementById("results");
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 //I tried adding print (resultText) to see if it would print what was defined as resultText 
 //The print (resultText) WORKED YAY!! It made the words "probability it is allergies" and "probability it is cold" pop up on the results page now I just need to get the percentage values to just show up
 //I tried printing the print(allergy_count / total_count) and print(cold_count / total_count)
 //I'll try deleting the print parts
 </script>
 	
-</div>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
