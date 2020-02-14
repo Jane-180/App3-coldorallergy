@@ -53,6 +53,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	function display_results(){
+		var resultText = document.getElementById("result");
+		var coldPercent= (cold_count / (cold_count + allergy_count)) * 100; //I moved the the variables and function for results down to the bottom so that it will read later on when the counts add up
+		var allergyPercent= (allergy_count / (cold_count + allergy_count)) * 100;
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent +"%;
+		}
 	
 	//I added the allergy percent function to do the math onclick for the results page
   </script>
@@ -180,12 +186,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	<p id="result"> </p>
 	<script>
-	function display_results(){
-		var resultText = document.getElementById("result");
-		var coldPercent= (cold_count / (cold_count + allergy_count)) * 100; //I moved the the variables and function for results down to the bottom so that it will read later on when the counts add up
-		var allergyPercent= (allergy_count / (cold_count + allergy_count)) * 100;
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent +"%;
-		}
 //the percentages are displayed by adding a % after the value with +
 //I tried adding print (resultText) to see if it would print what was defined as resultText 
 //The print (resultText) WORKED YAY!! It made the words "probability it is allergies" and "probability it is cold" pop up on the results page now I just need to get the percentage values to just show up
