@@ -55,7 +55,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
+	
+	function alleryPercent(){
+		allergyPercent= allergy_count / cold_count + allergy_count * 100;
+	}
+	//I added the allergy percent function to do the math onclick for the results page
   </script>
 
 
@@ -106,8 +110,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p>Are your eyes itchy or watery?</p>    
     	</div>
 <!--I tried putting a one in all the parentheses to see if that will add a count on click-->
-	<a href="#two"  onclick="allergyAdd(1);" class="w3-btn w3-black"> Yes</a>
-        <a href="#two"  onclick="coldAdd(1);" class="w3-btn w3-black">No</a>
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 </div>
 
 <div class="page" id="two">
@@ -118,8 +122,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?.</p>
 	</div>
-	<a href="#three"  onclick="allergyAdd(1);" class="w3-btn w3-black"> No</a>
-        <a href="#three"  onclick="coldAdd(1);" class="w3-btn w3-black">Yes</a>
+	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+        <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 </div>	
 
 <div class="page" id="three">
@@ -130,8 +134,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
 	</div>
-	<a href="#four"  onclick="allergyAdd(1);" class="w3-btn w3-black"> No</a>
-        <a href="#four"  onclick="coldAdd(1);" class="w3-btn w3-black">Yes</a>
+	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+        <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 </div>	
 
 <div class="page" id="four">
@@ -142,8 +146,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
 	</div>
-	<a href="#five"  onclick="allergyAdd(1);" class="w3-btn w3-black"> Yes</a>
-        <a href="#five"  onclick="coldAdd(1);" class="w3-btn w3-black">No</a>
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 </div>	
 
 
@@ -156,8 +160,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Is your mucus clear colored?</p>
 	</div>
-	<a href="#six"  onclick="allergyAdd(1);" class="w3-btn w3-black"> Yes</a>
-        <a href="#six"  onclick="coldAdd(1);" class="w3-btn w3-black">No</a>
+	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 </div>	
 
 <!--I added question six this is for the additional cold question-->
@@ -169,8 +173,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Are you experiencing chills?</p>
 	</div>
-	<a href="#results"  onclick="allergyAdd(1);" class="w3-btn w3-black"> No</a>
-        <a href="#results"  onclick="coldAdd(1);" class="w3-btn w3-black">Yes</a>
+	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+        <a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 </div>	
 	
 <!--I added a results page and changed the id and header to match results-->
@@ -179,11 +183,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
-<!-- I added the div content container part so hopefully my title of results will reappear and the script part will be displayed-->
+<!-- I added the div content container part so hopefully my results will now have a button-->
 	<div id="content" class="w3-container">
+		<p>Click for Results</p>
+	</div>
+	<a href="#results_percentage"	onclick= "allegeryPercent();"	class="w3-btn w3-black"> Results</a>
 <!--the script part down here adds up the variables and I further indented the script-->
-		<p>
-		<script>
+	
+	<script>
 	var resultText = document.getElementById("results");
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 //I tried adding print (resultText) to see if it would print what was defined as resultText 
@@ -191,7 +198,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 //I tried printing the print(allergy_count / total_count) and print(cold_count / total_count)
 //I'll try deleting the print parts
 </script>
-		</p> <!-- I hope adding these <p>'s will display what's inside on my screen-->
+	
 </div>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
