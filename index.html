@@ -179,8 +179,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
-<!--the script part down here adds up the variables-->
-	<script>
+<!-- I added the div content container part so hopefully my title of results will reappear and the script part will be displayed-->
+	<div id="content" class="w3-container">
+<!--the script part down here adds up the variables and I further indented the script-->
+		<script>
 	var resultText = document.getElementById("results");
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 //I tried adding print (resultText) to see if it would print what was defined as resultText 
