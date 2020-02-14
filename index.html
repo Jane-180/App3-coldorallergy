@@ -56,10 +56,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function display_results(){
 		var resultText = document.getElementById("result");
 		var coldPercent= (cold_count / (cold_count + allergy_count)) * 100; //I moved the the variables and function for results down to the bottom so that it will read later on when the counts add up
-		var allergyPercent= (allergy_count / (cold_count + allergy_count)) * 100;
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent +"%";
+		var allergyPercent= (allergy_count / (cold_count + allergy_count)) * 100; //proper math using variables
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent +"%"; //the % signs after the +value+ will print a percentage 
 		}
-	
+	//formality to have script at the top
 	//I added the allergy percent function to do the math onclick for the results page
   </script>
 
@@ -126,7 +126,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
         <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
 </div>	
-
+<!-- the multple divs are containters for the multiple questions-->
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -184,15 +184,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
-	<p id="result"> </p>
+	<p id="result"> </p> <!-- This paragraph will make the results page display the results-->
 	<script>
+//The comments below came from my proccess of trial and error with script ultimately I moved all the script to the top
 //the percentages are displayed by adding a % after the value with +
 //I tried adding print (resultText) to see if it would print what was defined as resultText 
 //The print (resultText) WORKED YAY!! It made the words "probability it is allergies" and "probability it is cold" pop up on the results page now I just need to get the percentage values to just show up
 //I tried printing the print(allergy_count / total_count) and print(cold_count / total_count)
 //I'll try deleting the print parts
 </script>
-<!-- I added the div content container part so hopefully my results will now have a button-->
+<!-- I added the div content container part so hopefully my results will now have a button; the button will say click for results-->
 	<a onclick= "display_results();"	class="w3-btn w3-black"> Click for Results</a>
 <!--the script part down here adds up the variables and I further indented the script-->
 	
