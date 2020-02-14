@@ -179,7 +179,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Results</h1>
 	</div>
 	<script>
-		function Results(){
+	function display_results(){
 		var resultText = document.getElementById("results");
 		var coldPercent= (cold_count / (cold_count + allergy_count)) * 100; //I moved the the variables and function for results down to the bottom so that it will read later on when the counts add up
 		var allergyPercent= (allergy_count / (cold_count + allergy_count)) * 100;
@@ -192,7 +192,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </script>
 <!-- I added the div content container part so hopefully my results will now have a button-->
 
-	<a href="#results_percentage"	onclick= "allegeryPercent(); coldPercent();"	class="w3-btn w3-black"> Click for Results</a>
+	<a href="#results"	onclick= "display_results();"	class="w3-btn w3-black"> Click for Results</a>
 <!--the script part down here adds up the variables and I further indented the script-->
 	
 	
