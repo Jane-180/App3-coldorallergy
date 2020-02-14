@@ -35,12 +35,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
    </head> 
 
 <!-- The new variables created in the script part will allow the results page to give the percentages for each cold and allergy-->
+<!-- I added parentheses to the denominators of my percent variables so that the math will work correctly-->
 <script>
         var allergy_count = 0;
         var cold_count = 0;
 	var total_count = cold_count + allergy_count
-	var cold_percent= cold_count / cold_count + allergy_count
-	var allergy_percent= allergy_count / cold_count + allegery_count
+	var cold_percent= cold_count / (cold_count + allergy_count)
+	var allergy_percent= allergy_count / (cold_count + allegery_count)
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
