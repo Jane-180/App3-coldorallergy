@@ -37,12 +37,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!-- The new variables created in the script part will allow the results page to give the percentages for each cold and allergy-->
 <!-- I added parentheses to the denominators of my percent variables so that the math will work correctly-->
 <!-- The 100 at the end will be used to turn the decimal into percentages-->
+<!-- I'm getting rid of the 100's and seeing if it fixes the actual values-->
 <script>
         var allergy_count = 0;
         var cold_count = 0;
 	var total_count = cold_count + allergy_count
-	var coldPercent= cold_count / (cold_count + allergy_count) * 100
-	var allergyPercent= allergy_count / (cold_count + allegery_count) *100
+	var coldPercent= cold_count / (cold_count + allergy_count)
+	var allergyPercent= allergy_count / (cold_count + allegery_count)
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -183,6 +184,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 //I tried adding print (resultText) to see if it would print what was defined as resultText 
 //The print (resultText) WORKED YAY!! It made the words "probability it is allergies" and "probability it is cold" pop up on the results page now I just need to get the percentage values to just show up
 	print(resultText)
+	
 </script>
 </div>
 	
